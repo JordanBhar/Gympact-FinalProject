@@ -13,6 +13,7 @@
 		4DFA7266292C356E006BAF73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7265292C356E006BAF73 /* Preview Assets.xcassets */; };
 		4DFA7270292C3795006BAF73 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA726F292C3795006BAF73 /* Workout.swift */; };
 		4DFA7272292C37AD006BAF73 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA7271292C37AD006BAF73 /* WorkoutController.swift */; };
+		4DFA7274292C3B6E006BAF73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4DFA7265292C356E006BAF73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DFA726F292C3795006BAF73 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		4DFA7271292C37AD006BAF73 /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
+		4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		4DFA725D292C356C006BAF73 /* Gympact */ = {
 			isa = PBXGroup;
 			children = (
+				4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */,
 				4DFA725E292C356C006BAF73 /* GympactApp.swift */,
 				4DFA726E292C35BA006BAF73 /* controller */,
 				4DFA726D292C35AA006BAF73 /* view */,
@@ -157,6 +160,7 @@
 			files = (
 				4DFA7266292C356E006BAF73 /* Preview Assets.xcassets in Resources */,
 				4DFA7263292C356E006BAF73 /* Assets.xcassets in Resources */,
+				4DFA7274292C3B6E006BAF73 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
