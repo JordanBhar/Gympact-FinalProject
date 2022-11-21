@@ -11,6 +11,8 @@
 		4DFA7261292C356C006BAF73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA7260292C356C006BAF73 /* ContentView.swift */; };
 		4DFA7263292C356E006BAF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7262292C356E006BAF73 /* Assets.xcassets */; };
 		4DFA7266292C356E006BAF73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7265292C356E006BAF73 /* Preview Assets.xcassets */; };
+		4DFA7270292C3795006BAF73 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA726F292C3795006BAF73 /* Workout.swift */; };
+		4DFA7272292C37AD006BAF73 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA7271292C37AD006BAF73 /* WorkoutController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		4DFA7260292C356C006BAF73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DFA7262292C356E006BAF73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DFA7265292C356E006BAF73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DFA726F292C3795006BAF73 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		4DFA7271292C37AD006BAF73 /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		4DFA726C292C359B006BAF73 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4DFA726F292C3795006BAF73 /* Workout.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 		4DFA726E292C35BA006BAF73 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				4DFA7271292C37AD006BAF73 /* WorkoutController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -162,7 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DFA7261292C356C006BAF73 /* ContentView.swift in Sources */,
+				4DFA7272292C37AD006BAF73 /* WorkoutController.swift in Sources */,
 				4DFA725F292C356C006BAF73 /* GympactApp.swift in Sources */,
+				4DFA7270292C3795006BAF73 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
