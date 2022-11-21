@@ -52,7 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				4DFA725E292C356C006BAF73 /* GympactApp.swift */,
-				4DFA7260292C356C006BAF73 /* ContentView.swift */,
+				4DFA726E292C35BA006BAF73 /* controller */,
+				4DFA726D292C35AA006BAF73 /* view */,
+				4DFA726C292C359B006BAF73 /* model */,
 				4DFA7262292C356E006BAF73 /* Assets.xcassets */,
 				4DFA7264292C356E006BAF73 /* Preview Content */,
 			);
@@ -65,6 +67,28 @@
 				4DFA7265292C356E006BAF73 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DFA726C292C359B006BAF73 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4DFA726D292C35AA006BAF73 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4DFA7260292C356C006BAF73 /* ContentView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4DFA726E292C35BA006BAF73 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
