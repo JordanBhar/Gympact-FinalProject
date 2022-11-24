@@ -5,6 +5,9 @@
 //  Created by Jordan Bhar on 2022-11-21.
 //
 
+import Firebase
+import FirebaseFirestore
+
 import SwiftUI
 
 @main

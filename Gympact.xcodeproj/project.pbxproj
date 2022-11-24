@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264FE1F89C1AA21DD04D14E1 /* Pods_Gympact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7907086636ADACB41E41AF2E /* Pods_Gympact.framework */; };
 		4DFA725F292C356C006BAF73 /* GympactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA725E292C356C006BAF73 /* GympactApp.swift */; };
 		4DFA7261292C356C006BAF73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA7260292C356C006BAF73 /* ContentView.swift */; };
 		4DFA7263292C356E006BAF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7262292C356E006BAF73 /* Assets.xcassets */; };
@@ -25,6 +26,9 @@
 		4DFA726F292C3795006BAF73 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		4DFA7271292C37AD006BAF73 /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7907086636ADACB41E41AF2E /* Pods_Gympact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gympact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57D5E4790BDE34564B23737 /* Pods-Gympact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gympact.release.xcconfig"; path = "Target Support Files/Pods-Gympact/Pods-Gympact.release.xcconfig"; sourceTree = "<group>"; };
+		DE751EE6D83CD4F950E70169 /* Pods-Gympact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gympact.debug.xcconfig"; path = "Target Support Files/Pods-Gympact/Pods-Gympact.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264FE1F89C1AA21DD04D14E1 /* Pods_Gympact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 			children = (
 				4DFA725D292C356C006BAF73 /* Gympact */,
 				4DFA725C292C356C006BAF73 /* Products */,
+				C1C9391B27667638CD7BCB06 /* Pods */,
+				6BCD536B0AAB618FCF022E41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +107,24 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		6BCD536B0AAB618FCF022E41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7907086636ADACB41E41AF2E /* Pods_Gympact.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1C9391B27667638CD7BCB06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE751EE6D83CD4F950E70169 /* Pods-Gympact.debug.xcconfig */,
+				B57D5E4790BDE34564B23737 /* Pods-Gympact.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DFA7269292C356E006BAF73 /* Build configuration list for PBXNativeTarget "Gympact" */;
 			buildPhases = (
+				B186E8E3124E4D2CB4FF4984 /* [CP] Check Pods Manifest.lock */,
 				4DFA7257292C356C006BAF73 /* Sources */,
 				4DFA7258292C356C006BAF73 /* Frameworks */,
 				4DFA7259292C356C006BAF73 /* Resources */,
+				449B53659711528D807D86A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		449B53659711528D807D86A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gympact/Pods-Gympact-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gympact/Pods-Gympact-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gympact/Pods-Gympact-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B186E8E3124E4D2CB4FF4984 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gympact-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DFA7257292C356C006BAF73 /* Sources */ = {
@@ -297,6 +366,7 @@
 		};
 		4DFA726A292C356E006BAF73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE751EE6D83CD4F950E70169 /* Pods-Gympact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +396,7 @@
 		};
 		4DFA726B292C356E006BAF73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B57D5E4790BDE34564B23737 /* Pods-Gympact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
