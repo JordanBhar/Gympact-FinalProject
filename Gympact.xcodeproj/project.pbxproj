@@ -15,6 +15,7 @@
 		4DFA7270292C3795006BAF73 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA726F292C3795006BAF73 /* Workout.swift */; };
 		4DFA7272292C37AD006BAF73 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA7271292C37AD006BAF73 /* WorkoutController.swift */; };
 		4DFA7274292C3B6E006BAF73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */; };
+		C543B327293068CB00FC4FE5 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C543B326293068CB00FC4FE5 /* Homepage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7907086636ADACB41E41AF2E /* Pods_Gympact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gympact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D5E4790BDE34564B23737 /* Pods-Gympact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gympact.release.xcconfig"; path = "Target Support Files/Pods-Gympact/Pods-Gympact.release.xcconfig"; sourceTree = "<group>"; };
+		C543B326293068CB00FC4FE5 /* Homepage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
 		DE751EE6D83CD4F950E70169 /* Pods-Gympact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gympact.debug.xcconfig"; path = "Target Support Files/Pods-Gympact/Pods-Gympact.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 		4DFA726D292C35AA006BAF73 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				C543B326293068CB00FC4FE5 /* Homepage.swift */,
 				4DFA7260292C356C006BAF73 /* ContentView.swift */,
 			);
 			path = view;
@@ -121,7 +124,6 @@
 				DE751EE6D83CD4F950E70169 /* Pods-Gympact.debug.xcconfig */,
 				B57D5E4790BDE34564B23737 /* Pods-Gympact.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,6 +245,7 @@
 				4DFA7261292C356C006BAF73 /* ContentView.swift in Sources */,
 				4DFA7272292C37AD006BAF73 /* WorkoutController.swift in Sources */,
 				4DFA725F292C356C006BAF73 /* GympactApp.swift in Sources */,
+				C543B327293068CB00FC4FE5 /* Homepage.swift in Sources */,
 				4DFA7270292C3795006BAF73 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +384,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,6 +415,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
