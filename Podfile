@@ -8,6 +8,8 @@ target 'Gympact' do
 	pod 'FirebaseAnalytics'
 	pod 'Firebase'
 	pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
+  pod 'FirebaseFirestoreSwift'
 
   # Pods for Gympact
 

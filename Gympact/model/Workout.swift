@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
+
+class Workout : Codable , Hashable {
+    
+    
+
+    
+}

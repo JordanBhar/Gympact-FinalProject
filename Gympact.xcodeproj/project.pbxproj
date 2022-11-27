@@ -13,7 +13,7 @@
 		4DFA7263292C356E006BAF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7262292C356E006BAF73 /* Assets.xcassets */; };
 		4DFA7266292C356E006BAF73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7265292C356E006BAF73 /* Preview Assets.xcassets */; };
 		4DFA7270292C3795006BAF73 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA726F292C3795006BAF73 /* Workout.swift */; };
-		4DFA7272292C37AD006BAF73 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA7271292C37AD006BAF73 /* WorkoutController.swift */; };
+		4DFA7272292C37AD006BAF73 /* WorkoutDBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA7271292C37AD006BAF73 /* WorkoutDBController.swift */; };
 		4DFA7274292C3B6E006BAF73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 		4DFA7262292C356E006BAF73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DFA7265292C356E006BAF73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DFA726F292C3795006BAF73 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
-		4DFA7271292C37AD006BAF73 /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
+		4DFA7271292C37AD006BAF73 /* WorkoutDBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDBController.swift; sourceTree = "<group>"; };
 		4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7907086636ADACB41E41AF2E /* Pods_Gympact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gympact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D5E4790BDE34564B23737 /* Pods-Gympact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gympact.release.xcconfig"; path = "Target Support Files/Pods-Gympact/Pods-Gympact.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		4DFA726E292C35BA006BAF73 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				4DFA7271292C37AD006BAF73 /* WorkoutController.swift */,
+				4DFA7271292C37AD006BAF73 /* WorkoutDBController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -121,7 +121,6 @@
 				DE751EE6D83CD4F950E70169 /* Pods-Gympact.debug.xcconfig */,
 				B57D5E4790BDE34564B23737 /* Pods-Gympact.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -241,7 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DFA7261292C356C006BAF73 /* ContentView.swift in Sources */,
-				4DFA7272292C37AD006BAF73 /* WorkoutController.swift in Sources */,
+				4DFA7272292C37AD006BAF73 /* WorkoutDBController.swift in Sources */,
 				4DFA725F292C356C006BAF73 /* GympactApp.swift in Sources */,
 				4DFA7270292C3795006BAF73 /* Workout.swift in Sources */,
 			);
