@@ -12,6 +12,9 @@ struct Homepage: View {
     
     var body: some View {
         NavigationLink(destination: WorkoutEduCatView(), tag: 1, selection: self.$selection){}
+        NavigationLink(destination: Calendar(), tag: 2, selection: self.$selection){}
+        NavigationLink(destination: Pedometer(), tag: 3, selection: self.$selection){}
+        NavigationLink(destination: WorkoutPlan(), tag: 4, selection: self.$selection){}
         
         NavigationView{
             VStack{
@@ -81,6 +84,7 @@ struct Homepage: View {
                         }//button
                         
                         Button {
+                            self.selection = 2
                             print("Calendar button was tapped")
                         } label: {
                             VStack{
@@ -98,6 +102,7 @@ struct Homepage: View {
                     VStack{
                         Button {
                             print("Workout Plan button was tapped")
+                            self.selection = 4
                         } label: {
                             VStack{
                                 Image(systemName: "plus.circle")
@@ -111,6 +116,7 @@ struct Homepage: View {
                         
                         Button {
                             print("Pedometer button was tapped")
+                            self.selection = 3
                         } label: {
                             VStack{
                                 Image(systemName: "shoeprints.fill")

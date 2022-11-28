@@ -26,6 +26,9 @@
 		4DFA7272292C37AD006BAF73 /* WorkoutDBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA7271292C37AD006BAF73 /* WorkoutDBController.swift */; };
 		4DFA7274292C3B6E006BAF73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */; };
 		C50B77B629353DFB00EF61C8 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B77B529353DFB00EF61C8 /* Homepage.swift */; };
+		C50B77B829354B8000EF61C8 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B77B729354B8000EF61C8 /* Calendar.swift */; };
+		C50B77BA29354BA000EF61C8 /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B77B929354BA000EF61C8 /* Pedometer.swift */; };
+		C50B77BC29354BAD00EF61C8 /* WorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B77BB29354BAD00EF61C8 /* WorkoutPlan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		7907086636ADACB41E41AF2E /* Pods_Gympact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gympact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57D5E4790BDE34564B23737 /* Pods-Gympact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gympact.release.xcconfig"; path = "Target Support Files/Pods-Gympact/Pods-Gympact.release.xcconfig"; sourceTree = "<group>"; };
 		C50B77B529353DFB00EF61C8 /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
+		C50B77B729354B8000EF61C8 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		C50B77B929354BA000EF61C8 /* Pedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
+		C50B77BB29354BAD00EF61C8 /* WorkoutPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlan.swift; sourceTree = "<group>"; };
 		DE751EE6D83CD4F950E70169 /* Pods-Gympact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gympact.debug.xcconfig"; path = "Target Support Files/Pods-Gympact/Pods-Gympact.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,9 @@
 				027CCB31293513C200BAE237 /* Information.swift */,
 				027CCB35293513DE00BAE237 /* Goals.swift */,
 				C50B77B529353DFB00EF61C8 /* Homepage.swift */,
+				C50B77B729354B8000EF61C8 /* Calendar.swift */,
+				C50B77B929354BA000EF61C8 /* Pedometer.swift */,
+				C50B77BB29354BAD00EF61C8 /* WorkoutPlan.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -283,6 +292,7 @@
 				027CCB30293513AD00BAE237 /* Register.swift in Sources */,
 				027CCB32293513C200BAE237 /* Information.swift in Sources */,
 				4D115C4329353E8300FCA3C3 /* WorkoutEduCatView.swift in Sources */,
+				C50B77B829354B8000EF61C8 /* Calendar.swift in Sources */,
 				4DFA7261292C356C006BAF73 /* ContentView.swift in Sources */,
 				4D115C4429353E8300FCA3C3 /* WorkoutEduListView.swift in Sources */,
 				027CCB2E2935139500BAE237 /* Login.swift in Sources */,
@@ -291,6 +301,8 @@
 				4DFA7272292C37AD006BAF73 /* WorkoutDBController.swift in Sources */,
 				C50B77B629353DFB00EF61C8 /* Homepage.swift in Sources */,
 				0222D8E029354247008D7B23 /* FireDBHelper.swift in Sources */,
+				C50B77BC29354BAD00EF61C8 /* WorkoutPlan.swift in Sources */,
+				C50B77BA29354BA000EF61C8 /* Pedometer.swift in Sources */,
 				027CCB392935144F00BAE237 /* Components.swift in Sources */,
 				4D115C4229353E8300FCA3C3 /* WorkoutEduDetailView.swift in Sources */,
 				4DFA725F292C356C006BAF73 /* GympactApp.swift in Sources */,
