@@ -13,13 +13,15 @@ class User: Identifiable{
     var age: Int = 0
     var feet: Int = 0
     var inches: Int = 0
+    var weight: Float = 0.0
     
     
-    init(gender: String, age: Int, feet: Int, inches: Int){
+    init(gender: String, age: Int, feet: Int, inches: Int, weight: Float){
         self.inches = inches
         self.age = age;
         self.feet = feet
         self.gender = gender
+        self.weight = weight
     }
     
 }

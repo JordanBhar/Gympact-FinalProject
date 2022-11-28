@@ -11,6 +11,8 @@ import Firebase
 
 struct Information: View {
     
+    @EnvironmentObject var fireDBHelper : FireDBHelper
+    
     @State public var selectedGender: String = "Male"
     
     @State public var selectionAge : Int = 18
@@ -153,13 +155,7 @@ struct Information: View {
                 
                 Button(action: {
                     
-                    let db = Firestore.firestore()
-                    let data = db.collection("UserData").document(Auth.auth().currentUser!.uid)
-                    data.updateData(["Gender": selectedGender, "Age": selectionAge, "Feet":selectionFeet, "Inches": selectionInches, "Weight": selectionWeight]) { error in
-                        if let error = error {
-                            print(error.localizedDescription)
-                        }
-                    }
+                    fireDBHelper.setUserData(userData: User.init(gender: selectedGender, age: selectionAge, feet: selectionFeet, inches: selectionInches, weight: Float(selectionWeight)))
                     
                   
                 }){

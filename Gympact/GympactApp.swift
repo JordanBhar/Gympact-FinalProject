@@ -12,6 +12,8 @@ import SwiftUI
 @main
 struct GympactApp: App {
     
+    let fireDBHelper = FireDBHelper()
+    
     init() {
         FirebaseApp.configure()
 //        fireDBHelper = FireDBHelper(database: Firestore.firestore())
@@ -21,7 +23,7 @@ struct GympactApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(fireDBHelper)
         }
     }
 }

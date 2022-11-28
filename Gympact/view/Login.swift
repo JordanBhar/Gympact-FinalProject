@@ -18,6 +18,7 @@ import FirebaseAuth
         @State private var showingAlert = false
         @State private var msg = ""
         
+        
         var body: some View {
             
                 VStack(spacing: 30){
