@@ -10,6 +10,7 @@ import SwiftUI
 struct Goals: View {
     
     @State var weightLoss: Bool = true
+    @State var muscleBuild: Bool = true
     @State private var selection: Int? = nil
     
     var body: some View {
@@ -46,14 +47,14 @@ struct Goals: View {
                     .font(.title)
                     .foregroundColor(Color.blue)
                     .padding(.bottom, 10)
-                            .foregroundColor(weightLoss ? .blue : .gray)
-                        Toggle("Weight", isOn: $weightLoss)
+                            .foregroundColor(muscleBuild ? .blue : .gray)
+                        Toggle("Weight", isOn: $muscleBuild)
                             .labelsHidden()
             }.padding(.all, 50)
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(lineWidth: 2)
-                            .foregroundColor(weightLoss ? .blue : .gray)
+                            .foregroundColor(muscleBuild ? .blue : .gray)
                     )
             
         
