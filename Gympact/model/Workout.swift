@@ -8,9 +8,11 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-class Workout : Codable , Hashable {
+class Workout {
     
-    
+    init() {
+        
+    }
 
     
 }
