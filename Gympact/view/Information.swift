@@ -104,10 +104,7 @@ struct Information: View {
                     }
                 }
                 
-                
-                
-               
-                    
+        
             }
             
             VStack(spacing: 10){

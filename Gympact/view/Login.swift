@@ -27,7 +27,6 @@ import FirebaseAuth
                     NavigationLink(destination: Information(), tag: 2, selection: self.$selection){}
                     
                     
-                    
                     Spacer()
                     
                     Text("LOGIN")
