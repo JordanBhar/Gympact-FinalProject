@@ -12,16 +12,17 @@ import SwiftUI
 @main
 struct GympactApp: App {
     
+    
+    
     init() {
         FirebaseApp.configure()
-//        fireDBHelper = FireDBHelper(database: Firestore.firestore())
     }
     
     
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WorkoutEduCatView()
         }
     }
 }
