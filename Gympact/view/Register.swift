@@ -78,6 +78,7 @@ import FirebaseAuth
                         }
                     }
                 }
+                .navigationBarBackButtonHidden(true)
                 .padding(.horizontal,30)
                 .padding(.vertical, 25)
             
@@ -90,6 +91,7 @@ import FirebaseAuth
                     showingAlert = true
                     msg = error!.localizedDescription
                 }
+                
                 Firestore.firestore().collection("UserData").document(Auth.auth().currentUser!.uid).setData(["Gender": "", "Age": 0, "Feet":0, "Inches": 0, "Weight": 0.0])
                 
                 

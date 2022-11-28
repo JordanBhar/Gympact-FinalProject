@@ -175,6 +175,7 @@ struct Information: View {
             
             
         }
+        .navigationBarBackButtonHidden(true)
         .padding(.horizontal,30)
         .padding(.vertical, 25)
         

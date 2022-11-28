@@ -73,11 +73,13 @@ struct ContentView: View {
                 .buttonStyle(CustomButton())
                 
                 
-                
+            
                 
             }.padding(.bottom, 75) //vstack
             
         }//nav stack
+        .navigationBarBackButtonHidden()
+        
       
         
     }

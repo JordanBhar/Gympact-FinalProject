@@ -83,6 +83,7 @@ import FirebaseAuth
                         }
                     }
                 }
+                .navigationBarBackButtonHidden(true)
                 .padding(.horizontal,30)
                 .padding(.vertical, 25)
                 .onAppear {
