@@ -21,7 +21,6 @@ struct WorkoutEduCatView: View {
     
     
     var body: some View {
-        NavigationView{
             
             
             VStack{
@@ -48,7 +47,7 @@ struct WorkoutEduCatView: View {
                     
                 }
             }
-        }
+        
     }
 }
 

@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct Homepage: View {
+    @State private var selection: Int? = nil
+    
     var body: some View {
+        NavigationLink(destination: WorkoutEduCatView(), tag: 1, selection: self.$selection){}
+        
         NavigationView{
             VStack{
                 HStack{
@@ -58,18 +62,19 @@ struct Homepage: View {
                     
                 }//hstack
                 .frame(width: 350, height: 125, alignment: .center)
-                .background(Color.indigo.clipShape(RoundedRectangle(cornerRadius:35)))
+                .background(Color.blue.clipShape(RoundedRectangle(cornerRadius:35)))
                 
                 HStack{
                     VStack{
                         Button {
                             print("Workout Education button was tapped")
+                            self.selection = 1
                         } label: {
                             VStack{
                                 Image(systemName: "dumbbell")
                                     .resizable()
                                     .frame(width: 150, height: 120, alignment: .center)
-                                    .foregroundColor(Color.indigo)
+                                    .foregroundColor(Color.blue)
                                 Text("Workout Education")
                             }//vstack
                             .padding(10)
@@ -82,7 +87,7 @@ struct Homepage: View {
                                 Image(systemName: "calendar")
                                     .resizable()
                                     .frame(width: 150, height: 150, alignment: .center)
-                                    .foregroundColor(Color.indigo)
+                                    .foregroundColor(Color.blue)
                                 Text("Calendar")
                             }//vstack
                             .padding(10)
@@ -98,7 +103,7 @@ struct Homepage: View {
                                 Image(systemName: "plus.circle")
                                     .resizable()
                                     .frame(width: 150, height: 150, alignment: .center)
-                                    .foregroundColor(Color.indigo)
+                                    .foregroundColor(Color.blue)
                                 Text("Workout Plan")
                             }//vstack
                             .padding(10)
@@ -111,7 +116,7 @@ struct Homepage: View {
                                 Image(systemName: "shoeprints.fill")
                                     .resizable()
                                     .frame(width: 150, height: 150, alignment: .center)
-                                    .foregroundColor(Color.indigo)
+                                    .foregroundColor(Color.blue)
                                 Text("Pedometer")
                             }//vstack
                             .padding(10)
@@ -123,8 +128,10 @@ struct Homepage: View {
                 
                 //            .padding()
             }//vstack
+            
             .navigationBarTitle("Homepage", displayMode: .automatic)
         }//nav view
+        .navigationBarBackButtonHidden(true)
     }//body
 }//view
 

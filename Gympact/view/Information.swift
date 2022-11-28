@@ -20,6 +20,8 @@ struct Information: View {
     @State public var selectionFeet : Int = 1
     @State public var selectionInches : Int = 1
     
+    @State private var selection: Int? = nil
+    
     
     public let gender: [String] = [
     "Male",
@@ -28,6 +30,7 @@ struct Information: View {
     ]
     
     var body: some View {
+        NavigationLink(destination: Goals(), tag: 1, selection: self.$selection){}
         
         VStack(spacing: 30){
             
@@ -157,6 +160,7 @@ struct Information: View {
                     
                     fireDBHelper.setUserData(userData: User.init(gender: selectedGender, age: selectionAge, feet: selectionFeet, inches: selectionInches, weight: Float(selectionWeight)))
                     
+                    self.selection = 1
                   
                 }){
                     Text("NEXT")

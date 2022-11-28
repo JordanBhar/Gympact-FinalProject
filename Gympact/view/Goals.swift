@@ -10,8 +10,10 @@ import SwiftUI
 struct Goals: View {
     
     @State var weightLoss: Bool = true
+    @State private var selection: Int? = nil
     
     var body: some View {
+        NavigationLink(destination: Homepage(), tag: 1, selection: self.$selection){}
         
         VStack(spacing: 30){
             
@@ -57,7 +59,7 @@ struct Goals: View {
         
             Button(action: {
                 
-                
+                self.selection = 1
               
             }){
                 
