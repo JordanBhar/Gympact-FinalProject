@@ -18,6 +18,18 @@ struct Goals: View {
                 .foregroundColor(Color.blue)
                 .padding(.bottom, 10)
             
+            Grid() {
+                        GridRow {
+                            
+                            Text("Weight Loss")
+                                .border(.gray)
+                                
+                        }
+                        GridRow {
+                            Color.yellow
+                        }
+                    }
+            
             
             
             

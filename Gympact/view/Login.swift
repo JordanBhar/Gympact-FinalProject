@@ -1,9 +1,3 @@
-//
-//  ScreenFive.swift
-//  SigninV2
-//
-//  Created by Гералд Бирген on 16.12.2020.
-//
 
 import SwiftUI
 import Firebase
