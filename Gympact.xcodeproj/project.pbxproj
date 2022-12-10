@@ -18,6 +18,7 @@
 		4D115C4229353E8300FCA3C3 /* WorkoutEduDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D115C3F29353E7C00FCA3C3 /* WorkoutEduDetailView.swift */; };
 		4D115C4329353E8300FCA3C3 /* WorkoutEduCatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D115C4029353E8000FCA3C3 /* WorkoutEduCatView.swift */; };
 		4D115C4429353E8300FCA3C3 /* WorkoutEduListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D115C4129353E8300FCA3C3 /* WorkoutEduListView.swift */; };
+		4DBAF34329440BF100DBA858 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAF34229440BF100DBA858 /* VideoView.swift */; };
 		4DFA725F292C356C006BAF73 /* GympactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA725E292C356C006BAF73 /* GympactApp.swift */; };
 		4DFA7261292C356C006BAF73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA7260292C356C006BAF73 /* ContentView.swift */; };
 		4DFA7263292C356E006BAF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA7262292C356E006BAF73 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		4D115C3F29353E7C00FCA3C3 /* WorkoutEduDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEduDetailView.swift; sourceTree = "<group>"; };
 		4D115C4029353E8000FCA3C3 /* WorkoutEduCatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEduCatView.swift; sourceTree = "<group>"; };
 		4D115C4129353E8300FCA3C3 /* WorkoutEduListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEduListView.swift; sourceTree = "<group>"; };
+		4DBAF34229440BF100DBA858 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		4DFA725B292C356C006BAF73 /* Gympact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gympact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFA725E292C356C006BAF73 /* GympactApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GympactApp.swift; sourceTree = "<group>"; };
 		4DFA7260292C356C006BAF73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				C50B77B729354B8000EF61C8 /* Calendar.swift */,
 				C50B77B929354BA000EF61C8 /* Pedometer.swift */,
 				C50B77BB29354BAD00EF61C8 /* WorkoutPlan.swift */,
+				4DBAF34229440BF100DBA858 /* VideoView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				027CCB2E2935139500BAE237 /* Login.swift in Sources */,
 				027CCB34293513D400BAE237 /* User.swift in Sources */,
 				027CCB36293513DE00BAE237 /* Goals.swift in Sources */,
+				4DBAF34329440BF100DBA858 /* VideoView.swift in Sources */,
 				4DFA7272292C37AD006BAF73 /* WorkoutDBController.swift in Sources */,
 				C50B77B629353DFB00EF61C8 /* Homepage.swift in Sources */,
 				0222D8E029354247008D7B23 /* FireDBHelper.swift in Sources */,
