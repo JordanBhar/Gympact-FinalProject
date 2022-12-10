@@ -10,7 +10,7 @@ import SwiftUI
 
 struct WorkoutEduDetailView: View {
     
-    let selectedBookIndex : Int
+    let workout : Workout
     @State private var workoutName : String = ""
     @EnvironmentObject var workoutDBController : WorkoutDBController
     
@@ -20,7 +20,7 @@ struct WorkoutEduDetailView: View {
             Divider()
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
             //Note: When adding the video links to database make sure to get the embed link
-            VideoView(URL: workoutDBController.workoutList[selectedBookIndex].url)
+            VideoView(URL: workout.url)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             
             Divider()
@@ -34,7 +34,7 @@ struct WorkoutEduDetailView: View {
                 
                 ScrollView(.horizontal){
                     HStack{
-                        ForEach(workoutDBController.workoutList[selectedBookIndex].muscleGroups, id: \.self){ tag in
+                        ForEach(workout.muscleGroups, id: \.self){ tag in
                             Text(tag)
                                 .frame(width: 75 , height: 35)
                                 .background(Color.blue)
@@ -54,20 +54,20 @@ struct WorkoutEduDetailView: View {
                 .frame(width: UIScreen.main.bounds.size.width - 50, alignment: .leading)
                 .bold()
                 .padding(.bottom)
-            Text(workoutDBController.workoutList[selectedBookIndex].description)
+            Text(workout.description)
                 .frame(width: UIScreen.main.bounds.size.width - 50, alignment: .leading)
             Spacer()
         }
-        .navigationTitle(workoutName)
+        .navigationTitle(workout.name)
         .navigationBarTitleDisplayMode(.large)
         .onAppear{
-            self.workoutName = workoutDBController.workoutList[selectedBookIndex].name
+//            self.workoutName = workoutDBController.workoutList[selectedBookIndex].name
         }
     }
 }
 
 struct WorkoutEduDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutEduDetailView(selectedBookIndex: 0)
+        WorkoutEduDetailView(workout: Workout())
     }
 }

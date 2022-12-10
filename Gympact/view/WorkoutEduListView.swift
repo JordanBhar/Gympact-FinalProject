@@ -18,7 +18,7 @@ struct WorkoutEduListView: View {
             List{
                 ForEach(self.workoutDBController.workoutList.enumerated().map({$0}), id: \.element.self){index, workout in
 
-                    NavigationLink(destination: WorkoutEduDetailView(selectedBookIndex: index).environmentObject(workoutDBController)){
+                    NavigationLink(destination: WorkoutEduDetailView(workout:self.workoutDBController.workoutList[index]).environmentObject(workoutDBController)){
                     
                         VStack(alignment: .leading){
                             Text("\(workout.name)")
@@ -39,7 +39,6 @@ struct WorkoutEduListView: View {
         .onAppear{
             if(self.workoutDBController.workoutList != nil){
                 self.workoutDBController.getCategoryWorkouts(category: selectedGroup)
-                print("CONTENT TEST PLEASE :\(self.workoutDBController.workoutList)")
             }
             
         }
