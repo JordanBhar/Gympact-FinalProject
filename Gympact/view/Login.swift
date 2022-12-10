@@ -5,21 +5,26 @@ import FirebaseAuth
 
     struct Login: View {
         
+
+        
         @State var email: String = "Test@gmail.com"
         @State var password: String = "123456"
         @State private var selection: Int? = nil
         @State private var userLoggedIn = false
         @State private var showingAlert = false
         @State private var msg = ""
-        
+        private var num: Int = 1
         
         var body: some View {
             
                 VStack(spacing: 30){
                     
                     NavigationLink(destination: Register(), tag: 1, selection: self.$selection){}
+                
                     
                     NavigationLink(destination: Information(), tag: 2, selection: self.$selection){}
+                    
+                    NavigationLink(destination: Homepage(), tag: 3, selection: self.$selection){}
                     
                     
                     Spacer()
@@ -49,6 +54,9 @@ import FirebaseAuth
                     
                     // SignIn
                     Button(action: {
+                    
+                    
+                        
                         login()
                     }){
                         Text("Sign In")
@@ -95,8 +103,27 @@ import FirebaseAuth
                     showingAlert = true
                     msg = error!.localizedDescription
                 } else {
-                    self.selection = 2
+                    
+                    let db = Firestore.firestore()
+                    
+                    db.collection("UserData").whereField("Gender", isEqualTo: "")
+                        .getDocuments() { (querySnapshot, err) in
+                            
+                            if let err = err {
+                                print("Error getting documents: \(err)")
+                            }
+                            else if(!querySnapshot!.isEmpty){
+                                self.selection = 3
+                            }
+                            else {
+                                self.selection = 2
+                            }
+                    }
+                    
+
                 }
+                
+                
             }
         }
     }

@@ -15,9 +15,11 @@ struct Bookmark: Identifiable {
     var items: [Bookmark]?
     
 
-    static let back_Monday = Bookmark(name: "Back & Biceps")
+    static let back = Bookmark(name: "Back & Biceps")
    
-    static let monday = Bookmark(name: "Monday", items: [Bookmark.back_Monday])
+    static let monday = Bookmark(name: "Monday", items: [
+    
+    ])
     static let tuesday = Bookmark(name: "Tuesday", items: [])
     static let wednesday = Bookmark(name: "Wednesday",  items: [])
     static let thursday = Bookmark(name: "Thursday",  items: [])

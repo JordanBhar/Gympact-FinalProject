@@ -6,17 +6,30 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import Firebase
 
 struct Goals: View {
     
     @State var weightLoss: Bool = true
     @State var muscleBuild: Bool = true
+    
     @State private var selection: Int? = nil
+    
+    @State public var selectionAge : Int = 18
+    @State public var selectionWeight : Int = 100
+    @State public var selectionFeet : Int = 1
+    @State public var selectionInches : Int = 1
+    @State public var selectedGender: String = "Male"
+    
+    @EnvironmentObject var fireDBHelper : FireDBHelper
+    
+    var info = Information()
     
     var body: some View {
         NavigationLink(destination: Homepage(), tag: 1, selection: self.$selection){}
         
-        VStack(spacing: 30){
+        VStack(spacing: 10){
             
             
             Text("Choose Goals")
@@ -26,19 +39,27 @@ struct Goals: View {
                 .padding(.bottom, 40)
             
             VStack {
+                
                         Text("Weight Loss")
                     .fontWeight(.bold)
                     .font(.title)
                     .foregroundColor(Color.blue)
                     .padding(.bottom, 10)
                             .foregroundColor(weightLoss ? .blue : .gray)
-                        Toggle("Weight", isOn: $weightLoss)
-                            .labelsHidden()
-            }.padding(.all, 50)
+                
+                Toggle(isOn: $weightLoss){
+                    Image("weight")
+                        .resizable()
+                        .frame(width: 200, height: 150)
+                        
+                }
+                            
+                
+            }.padding(.all, 20)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 15)
+                        RoundedRectangle(cornerRadius: 25)
                             .stroke(lineWidth: 2)
-                            .foregroundColor(weightLoss ? .blue : .gray)
+                            .foregroundColor(weightLoss ? .green : .red)
                     )
             
             VStack {
@@ -48,17 +69,24 @@ struct Goals: View {
                     .foregroundColor(Color.blue)
                     .padding(.bottom, 10)
                             .foregroundColor(muscleBuild ? .blue : .gray)
-                        Toggle("Weight", isOn: $muscleBuild)
-                            .labelsHidden()
-            }.padding(.all, 50)
+                
+                Toggle( isOn: $muscleBuild){
+                    Image("muscle")
+                        .resizable()
+                        .frame(width: 175, height: 175)
+                }
+                          
+            }.padding(.all, 20)
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(lineWidth: 2)
-                            .foregroundColor(muscleBuild ? .blue : .gray)
+                            .foregroundColor(muscleBuild ? .green : .red)
                     )
             
         
             Button(action: {
+                
+                fireDBHelper.setUserData(userData: User.init(gender: selectedGender, age: selectionAge, feet: selectionFeet, inches: selectionInches, weight: Float(selectionWeight), goal_weight: Bool(weightLoss), goal_muscle: Bool(muscleBuild)))
                 
                 self.selection = 1
               
