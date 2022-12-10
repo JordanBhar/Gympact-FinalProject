@@ -9,55 +9,112 @@ import SwiftUI
 import CoreMotion
 
 struct ContentView: View {
+    let activityManager = CMMotionActivityManager()
+    let pedometer = CMPedometer()
     
-    //Provides to create an instance of the CMMotionActivityManager.
-    private let activityManager = CMMotionActivityManager()
-    // Provides to create an instance of the CMPedometer.
-    private let pedometer = CMPedometer()
-    
-    
+    @State private var steps : Int = 0
+    @State private var activityState : String = "Unknown"
+    @State private var activityImage : Image = Image(systemName: "figure.stand")
     
     var body: some View {
-        VStack {
-            
-            
-            Image(systemName: "shoeprints.fill")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("10000 Steps!")
+        VStack{
+            HStack{
+                
+                //            Spacer()
+                
+                //            HStack{
+                //                VStack{
+                
+                self.activityImage
+                    .resizable()
+                    .frame(width: 15, height: 30, alignment: .center)
+                    .foregroundColor(.white)
+                //                        .padding(.top, 100)
+                
+                //                    Text("\(self.activityState)")
+                //                        .font(.system(size: 10))
+                //                        .padding(.bottom, 10)
+                //                }//vstack
+                //            }//hstack
+                
+                //            HStack{
+                //            Text("PEDOMETER!")
+                VStack{
+                    Text("\(self.steps)")
+                        .font(.system(size: 30))
+                        .foregroundColor(.white)
+                    
+                    Text("steps")
+                    //                        .padding(.top, 20)
+                    //                        .font(.system(size: 20))
+                        .foregroundColor(.white)
+                }//vstack
+                //            }//hstack
+                //            .padding(.bottom, 100)
+                //            Spacer()
+                
+                
+                
+            }//vstack
+            .padding(.bottom, 10)
+            Button(action: {
+                self.steps = 0
+            }){
+                Text("Reset Steps")
+                    .foregroundColor(Color.white)
+                    .font(.system(size: 15))
+            }
+                        .frame(width: 125, height: 33)
+            .background(Color.blue)
+            .cornerRadius(15)
+            .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.blue, lineWidth: 1))
         }
-        .padding()
-    }
+        .onAppear(){
+            self.startActivityUpdates()
+            self.startUpdates()
+        }//on appear
+        
+    }//body
     
     
-//    func startActivityUpdates(){
-//        activityManager.startActivityUpdates(to: OperationQueue.main) { (activity: CMMotionActivity?) in
-//            guard let activity = activity else { return }
-//            DispatchQueue.main.async {
-//                if activity.stationary {
-//                    print("Stationary")
-//                } else if activity.walking {
-//                    print("Walking")
-//                } else if activity.running {
-//                    print("Running")
-//                } else if activity.automotive {
-//                    print("Automotive")
-//                }
-//            }
-//        }
-//    }
-//    
-//    func startUpdates(){
-//        if CMPedometer.isStepCountingAvailable() {
-//            pedometer.startUpdates(from: Date()) { pedometerData, error in
-//                guard let pedometerData = pedometerData, error == nil else { return }
-//                
-//                DispatchQueue.main.async {
-//                    print(pedometerData.numberOfSteps.intValue)
-//                }
-//            }
-//        }
-//    }
+    func startActivityUpdates(){
+           activityManager.startActivityUpdates(to: OperationQueue.main) { (activity: CMMotionActivity?) in
+               guard let activity = activity else { return }
+               DispatchQueue.main.async {
+                   if activity.stationary {
+                       print("Stationary")
+                       activityImage = Image(systemName: "figure.stand")
+                       activityState = "Stationary"
+                   } else if activity.walking {
+                       print("Walking")
+                       activityImage = Image(systemName: "figure.walk")
+                       activityState = "Walking"
+                   } else if activity.running {
+                       print("Running")
+                       activityImage = Image(systemName: "figure.run")
+                       activityState = "Running"
+                   } else if activity.automotive {
+                       print("Automotive")
+                       activityImage = Image(systemName: "car")
+                       activityState = "Automotive"
+                   }
+               }
+           }
+       }
+   
+       func startUpdates(){
+           if CMPedometer.isStepCountingAvailable() {
+               pedometer.startUpdates(from: Date()) { pedometerData, error in
+                   guard let pedometerData = pedometerData, error == nil else { return }
+                
+                   DispatchQueue.main.async {
+                       print(pedometerData.numberOfSteps.intValue)
+                       steps = pedometerData.numberOfSteps.intValue
+//                       return pedometerData.numberOfSteps.intValue
+                   }
+               }
+           }
+       }
 }
 
 struct ContentView_Previews: PreviewProvider {
