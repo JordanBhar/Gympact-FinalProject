@@ -34,6 +34,7 @@
 		C50B77C6293554C300EF61C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B77C5293554C300EF61C8 /* ContentView.swift */; };
 		C50B77C8293554C600EF61C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50B77C7293554C600EF61C8 /* Assets.xcassets */; };
 		C50B77CB293554C600EF61C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50B77CA293554C600EF61C8 /* Preview Assets.xcassets */; };
+		C57A1859294450A100A3DC86 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57A1858294450A100A3DC86 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		C50B77C7293554C600EF61C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50B77CA293554C600EF61C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C50B77CF293556F400EF61C8 /* GympactWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GympactWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C57A1858294450A100A3DC86 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C59AE16C2942F49A000158DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DE751EE6D83CD4F950E70169 /* Pods-Gympact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gympact.debug.xcconfig"; path = "Target Support Files/Pods-Gympact/Pods-Gympact.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 				C50B77B929354BA000EF61C8 /* Pedometer.swift */,
 				C50B77BB29354BAD00EF61C8 /* WorkoutPlan.swift */,
 				4DBAF34229440BF100DBA858 /* VideoView.swift */,
+				C57A1858294450A100A3DC86 /* SettingsView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				4D115C4329353E8300FCA3C3 /* WorkoutEduCatView.swift in Sources */,
 				C50B77B829354B8000EF61C8 /* Calendar.swift in Sources */,
 				4DFA7261292C356C006BAF73 /* ContentView.swift in Sources */,
+				C57A1859294450A100A3DC86 /* SettingsView.swift in Sources */,
 				4D115C4429353E8300FCA3C3 /* WorkoutEduListView.swift in Sources */,
 				027CCB2E2935139500BAE237 /* Login.swift in Sources */,
 				027CCB34293513D400BAE237 /* User.swift in Sources */,

@@ -15,6 +15,7 @@ struct Homepage: View {
         NavigationLink(destination: Calendar(), tag: 2, selection: self.$selection){}
         NavigationLink(destination: Pedometer(), tag: 3, selection: self.$selection){}
         NavigationLink(destination: WorkoutPlan(), tag: 4, selection: self.$selection){}
+        NavigationLink(destination: SettingsView(), tag: 5, selection: self.$selection){}
         
         NavigationView{
             VStack{
@@ -133,6 +134,19 @@ struct Homepage: View {
                 }//Hstack
                 
                 //            .padding()
+                .toolbar{
+                    
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        
+                        Button(action: {
+                            self.selection = 5
+                        }, label: {
+                            Image(systemName: "gearshape")
+                        })
+
+                    }
+                    
+                }//toolbar
             }//vstack
             
             .navigationBarTitle("Homepage", displayMode: .automatic)
