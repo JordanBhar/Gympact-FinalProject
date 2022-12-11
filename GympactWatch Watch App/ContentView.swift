@@ -19,44 +19,26 @@ struct ContentView: View {
     var body: some View {
         VStack{
             HStack{
-                
-                //            Spacer()
-                
-                //            HStack{
-                //                VStack{
-                
+
                 self.activityImage
                     .resizable()
                     .frame(width: 15, height: 30, alignment: .center)
                     .foregroundColor(.white)
-                //                        .padding(.top, 100)
-                
-                //                    Text("\(self.activityState)")
-                //                        .font(.system(size: 10))
-                //                        .padding(.bottom, 10)
-                //                }//vstack
-                //            }//hstack
-                
-                //            HStack{
-                //            Text("PEDOMETER!")
+               
                 VStack{
                     Text("\(self.steps)")
                         .font(.system(size: 30))
                         .foregroundColor(.white)
                     
                     Text("steps")
-                    //                        .padding(.top, 20)
-                    //                        .font(.system(size: 20))
                         .foregroundColor(.white)
                 }//vstack
-                //            }//hstack
-                //            .padding(.bottom, 100)
-                //            Spacer()
                 
                 
                 
-            }//vstack
+            }//hstack
             .padding(.bottom, 10)
+            
             Button(action: {
                 self.steps = 0
             }){
@@ -68,7 +50,8 @@ struct ContentView: View {
             .background(Color.blue)
             .cornerRadius(15)
             .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.blue, lineWidth: 1))
-        }
+            
+        }//vstack
         .onAppear(){
             self.startActivityUpdates()
             self.startUpdates()

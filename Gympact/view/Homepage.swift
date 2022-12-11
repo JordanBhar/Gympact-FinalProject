@@ -12,7 +12,7 @@ struct Homepage: View {
     
     var body: some View {
         NavigationLink(destination: WorkoutEduCatView(), tag: 1, selection: self.$selection){}
-        NavigationLink(destination: Calendar(), tag: 2, selection: self.$selection){}
+        NavigationLink(destination: CalculatorView(), tag: 2, selection: self.$selection){}
         NavigationLink(destination: Pedometer(), tag: 3, selection: self.$selection){}
         NavigationLink(destination: WorkoutPlan(), tag: 4, selection: self.$selection){}
         NavigationLink(destination: SettingsView(), tag: 5, selection: self.$selection){}
@@ -86,14 +86,14 @@ struct Homepage: View {
                         
                         Button {
                             self.selection = 2
-                            print("Calendar button was tapped")
+                            print("Calculator button was tapped")
                         } label: {
                             VStack{
-                                Image(systemName: "calendar")
+                                Image(systemName: "plus.circle")
                                     .resizable()
                                     .frame(width: 150, height: 150, alignment: .center)
                                     .foregroundColor(Color.blue)
-                                Text("Calendar")
+                                Text("Calculator")
                             }//vstack
                             .padding(10)
                         }//button
@@ -106,7 +106,7 @@ struct Homepage: View {
                             self.selection = 4
                         } label: {
                             VStack{
-                                Image(systemName: "plus.circle")
+                                Image(systemName: "square.and.pencil")
                                     .resizable()
                                     .frame(width: 150, height: 150, alignment: .center)
                                     .foregroundColor(Color.blue)
