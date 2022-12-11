@@ -29,7 +29,7 @@ struct SettingsView: View {
                 .padding(.bottom, 10)
                 .padding(.top, 50)
             
-            Text("Signed in as User: ")
+            Text("Signed in as: ")
                 .fontWeight(.bold)
                 .font(.largeTitle)
                 .padding(.bottom, 10)

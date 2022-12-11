@@ -104,19 +104,26 @@ import FirebaseAuth
                 } else {
                     
                     let db = Firestore.firestore()
+//                    let query = db.collection("UserData").whereField("Gender", isEqualTo: "Male")
+//                    query.getDocuments { (querySnapshot, error) in
+//                      if let querySnapshot = querySnapshot {
+//                          self.selection = 2
+//                      } else {
+//                          self.selection = 3
+//                      }
+//                    }
                     
-                    db.collection("UserData").whereField("Gender", isEqualTo: "")
-                        .getDocuments() { (querySnapshot, err) in
-                            
-                            if let err = err {
-                                print("Error getting documents: \(err)")
-                            }
-                            else if(!querySnapshot!.isEmpty){
+                    let ref = Firestore.firestore().collection("UserData")
+                    ref.whereField("Gender", isEqualTo: "").getDocuments { (querySnapshot, error) in
+                        if error != nil {
+                            // Handle error
+                        } else {
+                            if !querySnapshot!.isEmpty {
+                                self.selection = 2
+                            } else {
                                 self.selection = 3
                             }
-                            else {
-                                self.selection = 2
-                            }
+                        }
                     }
                     
 
