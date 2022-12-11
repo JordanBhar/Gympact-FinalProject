@@ -30,7 +30,7 @@ struct Homepage: View {
                     
                     ZStack{
     
-                        Map(coordinateRegion: self.$userRegion, annotationItems: locationController.routePins , annotationContent: { location in
+                        Map(coordinateRegion: self.$userRegion, showsUserLocation: true, annotationItems: locationController.routePins , annotationContent: { location in
                             MapMarker(coordinate: location.coordinate)
                         })
                             .frame(width: 400, height: 300)
