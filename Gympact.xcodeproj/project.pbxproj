@@ -142,10 +142,10 @@
 				027CCB2F293513AD00BAE237 /* Register.swift */,
 				027CCB31293513C200BAE237 /* Information.swift */,
 				027CCB35293513DE00BAE237 /* Goals.swift */,
-				C50B77B529353DFB00EF61C8 /* Homepage.swift */,
 				C50B77B729354B8000EF61C8 /* Calendar.swift */,
 				C50B77B929354BA000EF61C8 /* Pedometer.swift */,
 				C50B77BB29354BAD00EF61C8 /* WorkoutPlan.swift */,
+				C50B77B529353DFB00EF61C8 /* Homepage.swift */,
 				4DBAF34229440BF100DBA858 /* VideoView.swift */,
 			);
 			path = view;
