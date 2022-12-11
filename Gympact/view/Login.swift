@@ -5,7 +5,6 @@ import FirebaseAuth
 
     struct Login: View {
         
-
         
         @State var email: String = "Test@gmail.com"
         @State var password: String = "123456"
