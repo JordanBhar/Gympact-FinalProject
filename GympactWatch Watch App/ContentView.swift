@@ -1,6 +1,6 @@
 //
-//  Pedometer.swift
-//  Gympact
+//  ContentView.swift
+//  GympactWatch Watch App
 //
 //  Created by Nichoalas Cammisuli on 2022-11-28.
 //
@@ -8,8 +8,7 @@
 import SwiftUI
 import CoreMotion
 
-struct Pedometer: View {
-    
+struct ContentView: View {
     let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
     
@@ -18,55 +17,41 @@ struct Pedometer: View {
     @State private var activityImage : Image = Image(systemName: "figure.stand")
     
     var body: some View {
-        
         VStack{
-            
-//            Spacer()
-            
             HStack{
+
+                self.activityImage
+                    .resizable()
+                    .frame(width: 15, height: 30, alignment: .center)
+                    .foregroundColor(.white)
+               
                 VStack{
+                    Text("\(self.steps)")
+                        .font(.system(size: 30))
+                        .foregroundColor(.white)
                     
-                    self.activityImage
-                        .resizable()
-                        .frame(width: 40, height: 65, alignment: .center)
-                        .foregroundColor(.blue)
-                        .padding(.top, 100)
-                        
-                    Text("\(self.activityState)")
-//                        .padding(.bottom, 10)
-                }//vstack
-            }//hstack
-            
-            HStack{
-                //            Text("PEDOMETER!")
-                Text("\(self.steps)")
-                    .font(.system(size: 60))
-                    .foregroundColor(.blue)
-                VStack{
                     Text("steps")
-                        .padding(.top, 20)
-                        .font(.system(size: 20))
-                        .foregroundColor(.blue)
+                        .foregroundColor(.white)
                 }//vstack
+                
+                
+                
             }//hstack
-//            .padding(.bottom, 100)
-            Spacer()
+            .padding(.bottom, 10)
             
             Button(action: {
                 self.steps = 0
             }){
                 Text("Reset Steps")
                     .foregroundColor(Color.white)
-                    .font(.system(size: 30))
+                    .font(.system(size: 15))
             }
-            .frame(width: 300, height: 100)
+                        .frame(width: 125, height: 33)
             .background(Color.blue)
             .cornerRadius(15)
             .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.blue, lineWidth: 1))
             
-            Spacer()
         }//vstack
-        .navigationBarTitle("Pedometer", displayMode: .automatic)
         .onAppear(){
             self.startActivityUpdates()
             self.startUpdates()
@@ -113,11 +98,10 @@ struct Pedometer: View {
                }
            }
        }
-    
 }
 
-struct Pedometer_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Pedometer()
+        ContentView()
     }
 }
