@@ -538,6 +538,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gympact/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "GymPact requires location to provide location based serives";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "GymPact requires location to provide location based serives";
 				INFOPLIST_KEY_NSMotionUsageDescription = "Require Motion Usage Description for the pedometer";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -571,6 +573,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gympact/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "GymPact requires location to provide location based serives";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "GymPact requires location to provide location based serives";
 				INFOPLIST_KEY_NSMotionUsageDescription = "Require Motion Usage Description for the pedometer";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
