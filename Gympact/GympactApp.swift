@@ -23,7 +23,7 @@ struct GympactApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(fireDBHelper)
+            WorkoutPlan().environmentObject(fireDBHelper)
         }
     }
 }

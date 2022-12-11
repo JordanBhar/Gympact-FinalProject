@@ -12,26 +12,32 @@ import FirebaseAuth
 
 struct WorkoutPlan: View {
     
-    @State var item = ["Biceps", "Triceps"]
     @State var isExpanded = false
     
+    @State private var queryResults: [String: Any]?
 
+    
     var body: some View {
         
         VStack{
             
+            Text("Workout Plan")
+                .fontWeight(.bold)
+                .font(.largeTitle)
+                .foregroundColor(Color.blue)
+                .padding(.top, 20)
+            
             List {
                 DisclosureGroup(
                     content: {
-                        ForEach(item, id: \.self){ item in
-                            Text("\(item)")
-                        }
+                       
                     },
                     label: {Text("Monday")})
                 
                 DisclosureGroup(
+                    
                     content: {
-                        Text("Tuesday")
+                        
                         
                     },
                     label: {Text("Tuesday")})
@@ -58,11 +64,41 @@ struct WorkoutPlan: View {
                     label: {Text("Friday")})
             }
             
+        }.onAppear(){
+            checkResult()
         }
+    
         
     }
     
+    func checkResult(){
+        
+        
+        let db = Firestore.firestore()
 
+        
+        db.collection("Workouts").document("Back & Biceps").collection("Exercises").getDocuments { (snapshot, error) in
+            if let snapshot = snapshot {
+    
+                let documents = snapshot.documents
+                
+                db.collection("UserData").whereField("Gender", isEqualTo: "Male")
+               
+                let filteredDocuments = documents.filter { document in
+                    return !["BackRow"].contains(document.documentID)
+                }
+
+                for document in filteredDocuments {
+                    let data = document.data()
+                    self.queryResults = data
+                    print(self.queryResults!["name"] ?? "")
+                }
+            } else {
+                print("Error getting documents: \(error!)")
+            }
+        }
+        
+    }
 }
 
 

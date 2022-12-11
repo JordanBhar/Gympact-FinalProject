@@ -72,7 +72,6 @@
 		C50B77CF293556F400EF61C8 /* GympactWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GympactWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C57A1858294450A100A3DC86 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C57A185A29454DB200A3DC86 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
-		C59AE16C2942F49A000158DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DE751EE6D83CD4F950E70169 /* Pods-Gympact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gympact.debug.xcconfig"; path = "Target Support Files/Pods-Gympact/Pods-Gympact.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +125,6 @@
 		4DFA725D292C356C006BAF73 /* Gympact */ = {
 			isa = PBXGroup;
 			children = (
-				C59AE16C2942F49A000158DD /* Info.plist */,
 				027CCB372935144300BAE237 /* Component */,
 				4DFA7273292C3B6E006BAF73 /* GoogleService-Info.plist */,
 				4DFA725E292C356C006BAF73 /* GympactApp.swift */,
