@@ -56,59 +56,42 @@ struct Homepage: View {
                                     SheetView().environmentObject(locationController)
                                 }
                             }
+                            
+                            HStack{
+                                Spacer()
+                                Button(action:{
+                                    self.locationController.routePins.removeAll()
+                                }){
+                                    Image(systemName: "trash")
+                                        .frame(width: 35, height: 35)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .stroke(.blue, lineWidth: 3)
+                                        )
+
+                                }
+                                .padding(EdgeInsets(top: 25, leading: 0, bottom: 0, trailing: 25))
+                            }
+                            
+                            HStack{
+                                Spacer()
+                                Button(action:{
+                                    self.locationController.routePins.removeLast()
+                                }){
+                                    Image(systemName: "arrow.uturn.backward")
+                                        .frame(width: 35, height: 35)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .stroke(.blue, lineWidth: 3)
+                                        )
+
+                                }
+                                .padding(EdgeInsets(top: 25, leading: 0, bottom: 0, trailing: 25))
+                            }
                             Spacer()
                         }
                     }
                 
-                    HStack{
-                        VStack{
-                            Text("Cardio")
-                                .foregroundColor(Color.white)
-                            HStack{
-                                Button {
-                                    print("Runing button was tapped")
-                                } label: {
-                                    VStack{
-                                        Image(systemName: "figure.run")
-                                            .resizable()
-                                            .frame(width: 25, height: 35, alignment: .center)
-                                            .foregroundColor(Color.white)
-                                    }//vstack
-                                    .padding(10)
-                                }//button
-                                
-                                
-                                Button {
-                                    print("Walking button was tapped")
-                                } label: {
-                                    VStack{
-                                        Image(systemName: "figure.walk")
-                                            .resizable()
-                                            .frame(width: 23, height: 35, alignment: .center)
-                                            .foregroundColor(Color.white)
-                                    }//vstack
-                                    .padding(10)
-                                }//button
-                                
-                                Button {
-                                    print("Biking button was tapped")
-                                } label: {
-                                    VStack{
-                                        Image(systemName: "figure.outdoor.cycle")
-                                            .resizable()
-                                            .frame(width: 35, height: 35, alignment: .center)
-                                            .foregroundColor(Color.white)
-                                    }//vstack
-                                    .padding(10)
-                                }//button
-                                
-                            }//hstack
-                        }//vstack
-                        
-                    }//hstack Pin List
-                    .frame(width: 350, height: 125, alignment: .center)
-                    .background(Color.blue.clipShape(RoundedRectangle(cornerRadius:35)))
-                    
                     HStack{
                         VStack{
                             Button {

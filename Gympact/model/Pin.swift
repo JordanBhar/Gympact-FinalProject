@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-struct Pin : Identifiable {
+struct Pin : Identifiable{
     var id: UUID
     
     
