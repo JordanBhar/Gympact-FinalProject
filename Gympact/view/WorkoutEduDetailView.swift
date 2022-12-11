@@ -12,6 +12,7 @@ struct WorkoutEduDetailView: View {
     
     let workout : Workout
     @State private var workoutName : String = ""
+    @State private var player = AVPlayer()
     @EnvironmentObject var workoutDBController : WorkoutDBController
     
     
@@ -20,8 +21,18 @@ struct WorkoutEduDetailView: View {
             Divider()
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
             //Note: When adding the video links to database make sure to get the embed link
-            VideoView(URL: workout.url)
+            VideoView(URL: workout.url!)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+            
+            
+//            VideoPlayer(player: player)
+//                .edgesIgnoringSafeArea(.all)
+//                .onAppear{
+//                    if let link = workout.url {
+//                        player = AVPlayer(url: URL(string: link)!)
+//                        player.play()
+//                    }
+//                }
             
             Divider()
             
@@ -36,13 +47,16 @@ struct WorkoutEduDetailView: View {
                     HStack{
                         ForEach(workout.muscleGroups, id: \.self){ tag in
                             Text(tag)
-                                .frame(width: 75 , height: 35)
+                                .frame(width: 100 , height: 35)
                                 .background(Color.blue)
                                 .foregroundColor(Color.white)
                                 .cornerRadius(10.0)
+                                .font(.system(size: 12))
+                                .bold()
                                 
                         }
                         .frame(width: 75, alignment: .leading)
+                        .padding()
                     }
                 }
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
@@ -60,9 +74,6 @@ struct WorkoutEduDetailView: View {
         }
         .navigationTitle(workout.name)
         .navigationBarTitleDisplayMode(.large)
-        .onAppear{
-//            self.workoutName = workoutDBController.workoutList[selectedBookIndex].name
-        }
     }
 }
 
