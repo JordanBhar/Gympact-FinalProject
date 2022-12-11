@@ -57,7 +57,7 @@ class LocationController : NSObject , ObservableObject, CLLocationManagerDelegat
             currentLocation = locations.last
             currentRegion = MKCoordinateRegion(
                 center: CLLocationCoordinate2D(latitude: currentLocation?.coordinate.latitude ?? 0.0, longitude: currentLocation?.coordinate.longitude ?? 0.0),
-                span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+                span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
             )
         }else{
             //location.first - last known location

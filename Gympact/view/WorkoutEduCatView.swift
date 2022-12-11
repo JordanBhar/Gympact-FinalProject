@@ -22,7 +22,6 @@ struct WorkoutEduCatView: View {
     
     var body: some View {
             
-            
             VStack{
                 
                 NavigationLink(destination: WorkoutEduListView(selectedGroup: selectedWorkoutGroup).environmentObject(workoutDBController), tag: 1, selection: self.$selection){}
@@ -43,11 +42,8 @@ struct WorkoutEduCatView: View {
                         .cornerRadius(15)
                         .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.blue, lineWidth: 1))
                     }
-                    
-                    
                 }
             }
-        
     }
 }
 
