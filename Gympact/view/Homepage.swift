@@ -111,14 +111,14 @@ struct Homepage: View {
                             
                             Button {
                                 self.selection = 2
-                                print("Calendar button was tapped")
+                                print("Calculator was pressed")
                             } label: {
                                 VStack{
-                                    Image(systemName: "calendar")
+                                    Image(systemName: "plus.circle")
                                         .resizable()
                                         .frame(width: 150, height: 150, alignment: .center)
                                         .foregroundColor(Color.blue)
-                                    Text("Calendar")
+                                    Text("Calculator")
                                 }//vstack
                                 .padding(10)
                             }//button
@@ -131,7 +131,7 @@ struct Homepage: View {
                                 self.selection = 4
                             } label: {
                                 VStack{
-                                    Image(systemName: "plus.circle")
+                                    Image(systemName: "square.and.pencil")
                                         .resizable()
                                         .frame(width: 150, height: 150, alignment: .center)
                                         .foregroundColor(Color.blue)
@@ -169,7 +169,7 @@ struct Homepage: View {
                         self.userRegion = locationController.currentRegion!
                     }
                 }
-                .navigationBarTitle("Homepage", displayMode: .automatic)
+                .navigationBarTitle("Homepage", displayMode: .inline)
             }//ZStack
         }//nav view
         .navigationBarBackButtonHidden(true)
