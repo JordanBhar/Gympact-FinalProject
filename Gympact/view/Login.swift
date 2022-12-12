@@ -103,16 +103,6 @@ import FirebaseAuth
                     msg = error!.localizedDescription
                 } else {
                     
-                    let db = Firestore.firestore()
-//                    let query = db.collection("UserData").whereField("Gender", isEqualTo: "Male")
-//                    query.getDocuments { (querySnapshot, error) in
-//                      if let querySnapshot = querySnapshot {
-//                          self.selection = 2
-//                      } else {
-//                          self.selection = 3
-//                      }
-//                    }
-                    
                     let ref = Firestore.firestore().collection("UserData")
                     ref.whereField("Gender", isEqualTo: "").getDocuments { (querySnapshot, error) in
                         if error != nil {
