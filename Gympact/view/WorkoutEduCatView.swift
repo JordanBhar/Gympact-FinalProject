@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseFirestore
 
 struct WorkoutEduCatView: View {
+    
     let workoutDBController = WorkoutDBController(database: Firestore.firestore())
     
     @State private var selectedIndex : Int = -1

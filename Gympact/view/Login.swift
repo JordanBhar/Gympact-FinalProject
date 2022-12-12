@@ -5,22 +5,24 @@ import FirebaseAuth
 
     struct Login: View {
         
-        @State var email: String = "Test@gmail.com"
-        @State var password: String = "123456"
+        
+        @State var email: String = ""
+        @State var password: String = ""
         @State private var selection: Int? = nil
         @State private var userLoggedIn = false
         @State private var showingAlert = false
         @State private var msg = ""
-        
+        private var num: Int = 1
         
         var body: some View {
             
                 VStack(spacing: 30){
                     
                     NavigationLink(destination: Register(), tag: 1, selection: self.$selection){}
-                    
+                                    
                     NavigationLink(destination: Information(), tag: 2, selection: self.$selection){}
                     
+                    NavigationLink(destination: Homepage(), tag: 3, selection: self.$selection){}
                     
                     Spacer()
                     
@@ -49,6 +51,9 @@ import FirebaseAuth
                     
                     // SignIn
                     Button(action: {
+                    
+                    
+                        
                         login()
                     }){
                         Text("Sign In")
@@ -95,8 +100,24 @@ import FirebaseAuth
                     showingAlert = true
                     msg = error!.localizedDescription
                 } else {
-                    self.selection = 2
+                    
+                    let ref = Firestore.firestore().collection("UserData")
+                    ref.whereField("Gender", isEqualTo: "").getDocuments { (querySnapshot, error) in
+                        if error != nil {
+                            // Handle error
+                        } else {
+                            if !querySnapshot!.isEmpty {
+                                self.selection = 2
+                            } else {
+                                self.selection = 3
+                            }
+                        }
+                    }
+                    
+
                 }
+                
+                
             }
         }
     }

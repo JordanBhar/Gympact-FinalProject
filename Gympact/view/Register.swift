@@ -85,14 +85,18 @@ import FirebaseAuth
                     msg = error!.localizedDescription
                 }
                 
-                Firestore.firestore().collection("UserData").document(Auth.auth().currentUser!.uid).setData(["Gender": "", "Age": 0, "Feet":0, "Inches": 0, "Weight": 0.0])
+                Firestore.firestore().collection("UserData").document(Auth.auth().currentUser!.uid).setData(["Gender": "", "Age": -1, "Feet":0, "Inches": 0, "Weight": 0.0, "Weight_Goal": false, "Muscle_Goal": false])
                 
+                showingAlert = true
+                msg = "User successfully registered!"
                 
             }
             
         
             
         }
+        
+        
         
     }
     

@@ -17,7 +17,7 @@ class FireDBHelper: ObservableObject {
         
         let db = Firestore.firestore()
         let data = db.collection("UserData").document(Auth.auth().currentUser!.uid)
-        data.updateData(["Gender": userData.gender, "Age": userData.age, "Feet":userData.feet, "Inches": userData.inches, "Weight": userData.weight]) { error in
+        data.updateData(["Gender": userData.gender, "Age": userData.age, "Feet":userData.feet, "Inches": userData.inches, "Weight": userData.weight, "Weight_Goal": userData.goal_weight, "Muscle_Goal": userData.goal_muscle]) { error in
             if let error = error {
                 print(error.localizedDescription)
             }

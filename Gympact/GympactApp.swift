@@ -16,7 +16,6 @@ struct GympactApp: App {
     
     init() {
         FirebaseApp.configure()
-//        fireDBHelper = FireDBHelper(database: Firestore.firestore())
     }
     
     
