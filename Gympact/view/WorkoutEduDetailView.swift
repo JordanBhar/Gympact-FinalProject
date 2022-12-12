@@ -25,7 +25,7 @@ struct WorkoutEduDetailView: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             
             
-//            VideoPlayer(player: player)
+//            VideoPlayer(player: player) this didnt work
 //                .edgesIgnoringSafeArea(.all)
 //                .onAppear{
 //                    if let link = workout.url {

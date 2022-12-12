@@ -30,11 +30,21 @@ struct Homepage: View {
                     Divider()
                     
                     ZStack{
-    
+                        
                         Map(coordinateRegion: self.$userRegion, showsUserLocation: true, annotationItems: locationController.routePins , annotationContent: { location in
                             MapMarker(coordinate: location.coordinate)
                         })
-                            .frame(width: 400, height: 300)
+                            .frame(width: UIScreen.main.bounds.size.width - 25, height: 300)
+                            .cornerRadius(15.0)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(.blue, lineWidth: 3)
+                            )
+    
+//                        Map(coordinateRegion: locationController.currentRegion, showsUserLocation: true, annotationItems: locationController.routePins , annotationContent: { location in
+//                            MapMarker(coordinate: location.coordinate)
+//                        })
+//                            .frame(width: 400, height: 300)
                         
                         VStack{
                             HStack{
@@ -64,22 +74,6 @@ struct Homepage: View {
                                     self.locationController.routePins.removeAll()
                                 }){
                                     Image(systemName: "trash")
-                                        .frame(width: 35, height: 35)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 15)
-                                                .stroke(.blue, lineWidth: 3)
-                                        )
-
-                                }
-                                .padding(EdgeInsets(top: 25, leading: 0, bottom: 0, trailing: 25))
-                            }
-                            
-                            HStack{
-                                Spacer()
-                                Button(action:{
-                                    self.locationController.routePins.removeLast()
-                                }){
-                                    Image(systemName: "arrow.uturn.backward")
                                         .frame(width: 35, height: 35)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 15)
@@ -159,6 +153,19 @@ struct Homepage: View {
                     }//Hstack App Features
                     
                 }//vstack
+                .toolbar{
+
+                                    ToolbarItem(placement: .navigationBarTrailing){
+
+                                        Button(action: {
+                                            self.selection = 5
+                                        }, label: {
+                                            Image(systemName: "gearshape")
+                                        })
+
+                                    }
+
+                                }//toolbar
                 .onChange(of: locationController.currentLocation) {  newLocation in
                     if(locationController.currentLocation != nil){
                         self.userRegion = locationController.currentRegion!
@@ -202,7 +209,7 @@ struct SheetView: View {
                 TextField("Enter City", text: $tfCity)
                     .padding()
                    
-                TextField("Enter City", text: $tfCountry)
+                TextField("Enter Country", text: $tfCountry)
                     .padding()
                     
             }//Form
