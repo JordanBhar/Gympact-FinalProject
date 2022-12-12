@@ -9,10 +9,10 @@ import SwiftUI
 import CoreMotion
 
 struct Pedometer: View {
-    
+    //activity states and pedometer
     let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
-    
+    //vars to track steps, active state, and active state image
     @State private var steps : Int = 0
     @State private var activityState : String = "Unknown"
     @State private var activityImage : Image = Image(systemName: "figure.stand")
@@ -20,8 +20,6 @@ struct Pedometer: View {
     var body: some View {
         
         VStack{
-            
-//            Spacer()
             
             HStack{
                 VStack{
@@ -33,12 +31,12 @@ struct Pedometer: View {
                         .padding(.top, 100)
                         
                     Text("\(self.activityState)")
-//                        .padding(.bottom, 10)
+
                 }//vstack
             }//hstack
             
             HStack{
-                //            Text("PEDOMETER!")
+                
                 Text("\(self.steps)")
                     .font(.system(size: 60))
                     .foregroundColor(.blue)
@@ -49,10 +47,10 @@ struct Pedometer: View {
                         .foregroundColor(.blue)
                 }//vstack
             }//hstack
-//            .padding(.bottom, 100)
+
             Spacer()
             
-            Button(action: {
+            Button(action: {//reset the user steps counter
                 self.steps = 0
             }){
                 Text("Reset Steps")
@@ -74,24 +72,24 @@ struct Pedometer: View {
         
     }//body
     
-    
+    //function to track the user activity state
     func startActivityUpdates(){
            activityManager.startActivityUpdates(to: OperationQueue.main) { (activity: CMMotionActivity?) in
                guard let activity = activity else { return }
                DispatchQueue.main.async {
-                   if activity.stationary {
+                   if activity.stationary {//not moving
                        print("Stationary")
                        activityImage = Image(systemName: "figure.stand")
                        activityState = "Stationary"
-                   } else if activity.walking {
+                   } else if activity.walking {//walking
                        print("Walking")
                        activityImage = Image(systemName: "figure.walk")
                        activityState = "Walking"
-                   } else if activity.running {
+                   } else if activity.running {//running
                        print("Running")
                        activityImage = Image(systemName: "figure.run")
                        activityState = "Running"
-                   } else if activity.automotive {
+                   } else if activity.automotive {//in car
                        print("Automotive")
                        activityImage = Image(systemName: "car")
                        activityState = "Automotive"
@@ -99,7 +97,7 @@ struct Pedometer: View {
                }
            }
        }
-   
+        //tracking the user steps
        func startUpdates(){
            if CMPedometer.isStepCountingAvailable() {
                pedometer.startUpdates(from: Date()) { pedometerData, error in
@@ -108,7 +106,6 @@ struct Pedometer: View {
                    DispatchQueue.main.async {
                        print(pedometerData.numberOfSteps.intValue)
                        steps = pedometerData.numberOfSteps.intValue
-//                       return pedometerData.numberOfSteps.intValue
                    }
                }
            }

@@ -173,7 +173,9 @@ struct CalculatorView: View {
         .navigationBarTitle("Calculator", displayMode: .automatic)
     }//body
     
+    //function to calculate the weight of the weight plates + bar that the user selected
     func calculateWeight(){
+        //convert the number of plates to an int
         let selectedPlate50Int = Int(selectedPlate50) ?? 0
         let selectedPlate45Int = Int(selectedPlate45) ?? 0
         let selectedPlate35Int = Int(selectedPlate35) ?? 0
@@ -185,8 +187,10 @@ struct CalculatorView: View {
         
         
 //        let selectedPlate2halfInt = Int(selectedPlate2half) ?? 0
+        //calculate the total weight in pounds
         totalWeight = (selectedPlate50Int * 50) + (selectedPlate45Int * 45) + (selectedPlate35Int * 35) + (selectedPlate25Int * 25) + (selectedPlate10Int * 10) + (selectedPlate5Int * 5) + selectedBarbellInt
         
+        //calculate the total weight in kilo
         totalWeightKG = round(Double(totalWeight)/2.2)
         
 //        + (selectedPlate2halfInt * 2.5)

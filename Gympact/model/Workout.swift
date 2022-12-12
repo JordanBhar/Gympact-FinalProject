@@ -8,17 +8,19 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-struct Workout : Codable , Hashable {
+struct Workout : Codable , Hashable{
    
     @DocumentID var id : String? = UUID().uuidString
     var name : String = ""
     var muscleGroups : [String] = []
     var description : String = ""
-    var url : String = ""
+    var url : String? = ""
     
     init(name: String, muscleGroups : [String], description: String, url: String){
         self.name = name
         self.muscleGroups = muscleGroups
+        self.description = description
+        self.url = url
         
     }
     
