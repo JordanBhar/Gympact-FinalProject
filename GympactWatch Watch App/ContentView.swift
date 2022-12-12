@@ -9,9 +9,11 @@ import SwiftUI
 import CoreMotion
 
 struct ContentView: View {
+    //pedmoeter and activity state (steps and current movement)
     let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
     
+    //variables to track steps, state, and state image
     @State private var steps : Int = 0
     @State private var activityState : String = "Unknown"
     @State private var activityImage : Image = Image(systemName: "figure.stand")
@@ -39,7 +41,7 @@ struct ContentView: View {
             }//hstack
             .padding(.bottom, 10)
             
-            Button(action: {
+            Button(action: {//reset the step counter
                 self.steps = 0
             }){
                 Text("Reset Steps")
@@ -59,24 +61,24 @@ struct ContentView: View {
         
     }//body
     
-    
+    //function to track activity state
     func startActivityUpdates(){
            activityManager.startActivityUpdates(to: OperationQueue.main) { (activity: CMMotionActivity?) in
                guard let activity = activity else { return }
                DispatchQueue.main.async {
-                   if activity.stationary {
+                   if activity.stationary {//not moving
                        print("Stationary")
                        activityImage = Image(systemName: "figure.stand")
                        activityState = "Stationary"
-                   } else if activity.walking {
+                   } else if activity.walking {//walking
                        print("Walking")
                        activityImage = Image(systemName: "figure.walk")
                        activityState = "Walking"
-                   } else if activity.running {
+                   } else if activity.running {//running
                        print("Running")
                        activityImage = Image(systemName: "figure.run")
                        activityState = "Running"
-                   } else if activity.automotive {
+                   } else if activity.automotive {//in car
                        print("Automotive")
                        activityImage = Image(systemName: "car")
                        activityState = "Automotive"
@@ -84,7 +86,7 @@ struct ContentView: View {
                }
            }
        }
-   
+        //count the steps the user has taken
        func startUpdates(){
            if CMPedometer.isStepCountingAvailable() {
                pedometer.startUpdates(from: Date()) { pedometerData, error in
