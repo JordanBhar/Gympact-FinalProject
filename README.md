@@ -56,7 +56,7 @@ Firebase:  Provides the location of Workout Education Database, User Database, 
 
 -   Users create account -> enter user info -> user goes to home page -> user views workout plan based on entered info 
     
--   User selects a cardio exercise option -> view their location route during exercise -> check pedometer after exercise 
+-   User enters location pin -> view their location route during exercise -> check pedometer after exercise 
     
 -   User logs in -> user views workout education -> user picks an exercise -> user views how to perform the exercise 
     
@@ -79,10 +79,17 @@ Firebase:  Provides the location of Workout Education Database, User Database, 
     
 
 -   UI/UX 
+-   ![image](https://user-images.githubusercontent.com/91032829/206960282-8e62662a-2aaf-4469-a125-0467bd863020.png)
     
 -   Pedometer 
+-   ![image](https://user-images.githubusercontent.com/91032829/206960362-75f8adaa-48a9-434e-a7e0-40cc64319325.png)
+
     
--   Calendar 
+-   Weight Calculator
+-   ![image](https://user-images.githubusercontent.com/91032829/206960330-207587eb-6ea4-4ca5-9dae-e49a6f412068.png)
+
+
+-   Help with exercise database items
     
 
 #### Jordan Bhar 991607958 
