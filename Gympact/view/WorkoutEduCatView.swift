@@ -22,6 +22,7 @@ struct WorkoutEduCatView: View {
     
     var body: some View {
             
+        ScrollView(.vertical){
             VStack{
                 
                 NavigationLink(destination: WorkoutEduListView(selectedGroup: selectedWorkoutGroup).environmentObject(workoutDBController), tag: 1, selection: self.$selection){}
@@ -44,6 +45,7 @@ struct WorkoutEduCatView: View {
                     }
                 }
             }
+        }
     }
 }
 
