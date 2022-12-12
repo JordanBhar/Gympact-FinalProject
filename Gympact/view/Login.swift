@@ -6,8 +6,8 @@ import FirebaseAuth
     struct Login: View {
         
         
-        @State var email: String = "Test@gmail.com"
-        @State var password: String = "123456"
+        @State var email: String = ""
+        @State var password: String = ""
         @State private var selection: Int? = nil
         @State private var userLoggedIn = false
         @State private var showingAlert = false
@@ -19,12 +19,10 @@ import FirebaseAuth
                 VStack(spacing: 30){
                     
                     NavigationLink(destination: Register(), tag: 1, selection: self.$selection){}
-                
-                    
+                                    
                     NavigationLink(destination: Information(), tag: 2, selection: self.$selection){}
                     
                     NavigationLink(destination: Homepage(), tag: 3, selection: self.$selection){}
-                    
                     
                     Spacer()
                     
